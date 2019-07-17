@@ -108,13 +108,13 @@ public class Configuration {
 	public static List<ISegmenter> loadSegmenter(){
 		//初始化词典单例
 		Dictionary.getInstance();
-		List<ISegmenter> segmenters = new ArrayList<ISegmenter>(4);
+		List<ISegmenter> segmenters = new ArrayList<ISegmenter>(2);
 		//处理数量词的子分词器
 		segmenters.add(new QuantifierSegmenter());
 		//处理中文词的子分词器
 		segmenters.add(new CJKSegmenter());
 		//处理字母的子分词器
-		segmenters.add(new LetterSegmenter()); 
+		//segmenters.add(new LetterSegmenter());
 		return segmenters;
 	}
 }
